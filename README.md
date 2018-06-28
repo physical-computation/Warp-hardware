@@ -29,8 +29,14 @@ Basic BOM (uses Mouser for components).
 # Implementation and Debug
 ![Warp](images/warp-revA-implementation-and-debug.png?raw=true "Warp")
 
+
+# Mechanical CAD Models for Board and Enclosures
+The repository also contains a mechanical CAD model for the board and designs for enclosures.
+
+<img src="images/warp-revA-enclosure-bottom-and-board.png" height="300"><img src="images/warp-revA-enclosure-top-bottom-and-board.png" height="300">
+
 ## Getting firmware
-You can obtain baseline firmware for the Warp platform from the Warp firmware repository.
+You can obtain baseline firmware for the Warp platform from the [Warp firmware](https://github.com/physical-computation/Warp-firmware) repository.
 
 
 ## Bugs
