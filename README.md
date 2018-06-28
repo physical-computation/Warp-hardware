@@ -26,6 +26,9 @@ The repository comes with the Gerber files pre-generated, and you can generate y
 Basic BOM (uses Mouser for components).
 
 
+# Implementation and Debug
+![Warp](images/warp-revA-implementation-and-debug.png?raw=true "Warp")
+
 ## Getting firmware
 You can obtain baseline firmware for the Warp platform from the Warp firmware repository.
 
