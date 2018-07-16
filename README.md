@@ -5,7 +5,7 @@ Warp is a hardware platform for efficient multi-modal sensing with adaptive appr
 
 
 ## Prerequisites
-The hardware design files are provided in the Eagle CAD format. You can use the free version of Eagle for MacOS, Linux, Windows to view the files. The designs is a 10-layer PCB, and you will need the full version of Eagle to make modifications. Fortunately, Eagle is relatively inexpensive and can also be purchased on a month-at-a-time subscription.
+The hardware design files are provided in the Eagle CAD format. You can use the free version of Eagle for MacOS, Linux, Windows to view the files. The designs is a 10-layer PCB, and you will need the full version of Eagle to make modifications. [For academics, the full version of Eagle (Eagle Professional) is completely free](https://knowledge.autodesk.com/support/eagle/learn-explore/caas/sfdcarticles/sfdcarticles/Eagle-Education.html). For non-university hobbyists, Eagle is relatively inexpensive and can also be purchased on a month-at-a-time subscription.
 
 The hardware design files are also provided as Gerbers, and you can use any of the numerous free Gerber viewers to view the design.
 
@@ -31,7 +31,7 @@ Basic BOM (uses Mouser for components).
 
 
 # Mechanical CAD Models for Board and Enclosures
-The repository also contains a mechanical CAD model for the board and designs for enclosures.
+The repository also contains a mechanical CAD model for the board and designs for enclosures, in Autodesk Fusion 360 format. [For academics, the full version of Autodesk Fusion 360 is completely free](https://www.autodesk.co.uk/products/fusion-360/students-teachers-educators). For non-university hobbyists, Fusion 360 is relatively inexpensive and can be purchased on a month-at-a-time subscription.
 
 <img src="images/warp-revA-enclosure-bottom-and-board.png" height="300"><img src="images/warp-revA-enclosure-top-bottom-and-board.png" height="300">
 
