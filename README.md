@@ -23,7 +23,7 @@ The repository comes with the Gerber files pre-generated, and you can generate y
 
 
 ## Getting boards assembled
-Basic BOM (uses Mouser for components).
+Basic [BOM](https://github.com/physical-computation/Warp-hardware/blob/master/revA/bom/mouser/warp-revA-bom.xlsx) (uses Mouser for components).
 
 
 # Implementation and Debug
