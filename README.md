@@ -15,7 +15,7 @@ The repository contains detailed instructions for getting the boards manufacture
 
 
 ## Adapting the designs
-The Warp hardware is provided under a BSD license. See details in LICENSE.txt
+The Warp hardware is provided under a BSD license. See details in [LICENSE.txt](https://github.com/physical-computation/Warp-hardware/blob/master/LICENSE.txt)
 
 
 ## Generating Gerbers for manufacturing
