@@ -1,13 +1,13 @@
 ![Warp](images/warp-revA-arch.png?raw=true "Warp")
 
 # Warp
-Warp is a hardware platform for efficient multi-modal sensing with adaptive approximation. The hardware contains 11 sensor ICs and a total of 21 different sensors. The design includes circuit-level facilities for trading sensor accuracy for power dissipation, and circuit-level facilities for trading sensor communication reliability for power dissipation. The sensors in Warp cover eight sensing modalities: temperature, pressure, 3-axis acceleration, 3-axis angular velocity, 3-axis magnetic flux density, humidity, infrared, color/light (615nm, 525nm, 465nm).
+Warp is a hardware platform for efficient multi-modal sensing with adaptive approximation. The hardware contains 11 sensor integrated circuits (ICs) and a total of 21 different sensors. The design includes circuit-level facilities for trading sensor accuracy for power dissipation, and circuit-level facilities for trading sensor communication reliability for power dissipation. The sensors in Warp cover eight sensing modalities: temperature, pressure, 3-axis acceleration, 3-axis angular velocity, 3-axis magnetic flux density, humidity, infrared, color/light (615nm, 525nm, 465nm).
 
 
 ## Prerequisites
-The hardware design files are provided in the Eagle CAD format. You can use the free version of Eagle for MacOS, Linux, Windows to view the files. The design is a 10-layer PCB, and you will need the full version of Eagle to make modifications. [For academics, the full version of Eagle (Eagle Professional) is completely free](https://knowledge.autodesk.com/support/eagle/learn-explore/caas/sfdcarticles/sfdcarticles/Eagle-Education.html). For non-university hobbyists, Eagle is relatively inexpensive and can also be purchased on a month-at-a-time subscription.
+We provide the hardware design files in the Eagle CAD format. You can use the free version of Eagle for MacOS, Linux, Windows to view the files. The design is a 10-layer PCB, and you will need the full version of Eagle to make modifications. [For academics, the full version of Eagle (Eagle Professional) is completely free](https://knowledge.autodesk.com/support/eagle/learn-explore/caas/sfdcarticles/sfdcarticles/Eagle-Education.html). For non-university hobbyists, Eagle is relatively inexpensive and can also be purchased on a month-at-a-time subscription.
 
-The hardware design files are also provided as Gerbers, and you can use any of the numerous free Gerber viewers to view the design.
+We also provide the hardware design files as Gerbers, and you can use any of the numerous free Gerber viewers to view the design.
 
 
 ## Getting boards manufactured
