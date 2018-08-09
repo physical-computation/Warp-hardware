@@ -5,9 +5,9 @@ Warp is a hardware platform for efficient multi-modal sensing with adaptive appr
 
 
 ## Prerequisites
-We provide the hardware design files in the Eagle CAD format. You can use the free version of Eagle for MacOS, Linux, Windows to view the files. The design is a 10-layer PCB, and you will need the full version of Eagle to make modifications. [For academics, the full version of Eagle (Eagle Professional) is completely free](https://knowledge.autodesk.com/support/eagle/learn-explore/caas/sfdcarticles/sfdcarticles/Eagle-Education.html). For non-university hobbyists, Eagle is relatively inexpensive and can also be purchased on a month-at-a-time subscription.
+We provide the hardware design files in the Eagle CAD format. You can use the free version of Eagle for MacOS, Linux, Windows to view the files. The design is a 10-layer PCB. You will need the full version of Eagle to make modifications. [For academics, the full version of Eagle (Eagle Professional) is completely free](https://knowledge.autodesk.com/support/eagle/learn-explore/caas/sfdcarticles/sfdcarticles/Eagle-Education.html). For non-university hobbyists, Eagle is relatively inexpensive and can also be purchased on a month-at-a-time subscription.
 
-We also provide the hardware design files as Gerbers, and you can use any of the numerous free Gerber viewers to view the design.
+We also provide the hardware design files as Gerbers. You can use any of the numerous free Gerber viewers to view the design.
 
 
 ## Getting boards manufactured
@@ -19,7 +19,7 @@ We license the Warp hardware designs under a BSD license. See details in [LICENS
 
 
 ## Generating Gerbers for manufacturing
-The repository comes with the Gerber files pre-generated, and you can generate your own Gerber files and drill files for manufacturing using Eagle.
+The repository comes with the Gerber files pre-generated. You can generate your own Gerber files and drill files for manufacturing using Eagle.
 
 
 ## Getting boards assembled
