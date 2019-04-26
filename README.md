@@ -1,5 +1,8 @@
 ![Warp](images/warp-revA-arch.png?raw=true "Warp")
 
+**The Warp hardware platform integrates 21 sensors in a complete system that is 3.6cmx3.3cm**
+- - - - 
+
 # Warp
 Warp is a hardware platform for efficient multi-modal sensing with adaptive approximation. The hardware contains 11 sensor integrated circuits (ICs) and a total of 21 different sensors. The design includes circuit-level facilities for trading sensor accuracy for power dissipation, and circuit-level facilities for trading sensor communication reliability for power dissipation. The sensors in Warp cover eight sensing modalities: temperature, pressure, 3-axis acceleration, 3-axis angular velocity, 3-axis magnetic flux density, humidity, infrared, color/light (615nm, 525nm, 465nm).
 
