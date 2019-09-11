@@ -8845,6 +8845,71 @@ Hirose Electric Co Ltd: ZX62-AB-5P</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MAX40200">
+<packages>
+<package name="DSBGA">
+<description>BGA package</description>
+<wire x1="-0.45" y1="0.365" x2="0.45" y2="0.365" width="0.0762" layer="51"/>
+<wire x1="0.45" y1="0.365" x2="0.45" y2="-0.365" width="0.0762" layer="51"/>
+<wire x1="0.45" y1="-0.365" x2="-0.45" y2="-0.365" width="0.0762" layer="51"/>
+<wire x1="-0.45" y1="-0.365" x2="-0.45" y2="0.365" width="0.0762" layer="51"/>
+<smd name="B2" x="0.175" y="-0.175" dx="0.2" dy="0.2" layer="1" roundness="100" stop="no"/>
+<smd name="B1" x="-0.175" y="-0.175" dx="0.2" dy="0.2" layer="1" roundness="100" stop="no"/>
+<smd name="A2" x="0.175" y="0.175" dx="0.2" dy="0.2" layer="1" roundness="100" stop="no"/>
+<smd name="A1" x="-0.175" y="0.175" dx="0.2" dy="0.2" layer="1" roundness="100" stop="no"/>
+<text x="-0.5" y="-1.235" size="0.6096" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<text x="-0.5" y="0.8" size="0.6096" layer="27" font="vector" ratio="15">&gt;VALUE</text>
+<wire x1="0.45" y1="0.365" x2="0.45" y2="-0.365" width="0.0762" layer="21"/>
+<wire x1="-0.45" y1="-0.365" x2="-0.45" y2="0.365" width="0.0762" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="-0.8" y="0.246"/>
+<vertex x="-0.627" y="0.173"/>
+<vertex x="-0.8" y="0.1"/>
+</polygon>
+<wire x1="-0.45" y1="0.365" x2="0.45" y2="0.365" width="0.0762" layer="21"/>
+<wire x1="-0.45" y1="-0.365" x2="0.45" y2="-0.365" width="0.0762" layer="21"/>
+<circle x="-0.175" y="0.175" radius="0.15" width="0" layer="29"/>
+<circle x="0.175" y="0.175" radius="0.15" width="0" layer="29"/>
+<circle x="-0.175" y="-0.175" radius="0.15" width="0" layer="29"/>
+<circle x="0.175" y="-0.175" radius="0.15" width="0" layer="29"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MAX40200">
+<description>&lt;h3&gt; Ideal Diode&lt;/h3&gt;</description>
+<wire x1="-7.62" y1="-7.62" x2="5.08" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="-7.62" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
+<text x="-7.62" y="7.874" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="-7.62" y="-8.128" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<pin name="IN" x="-10.16" y="5.08" visible="pin" length="short" direction="in"/>
+<pin name="GND" x="-10.16" y="-5.08" visible="pin" length="short" direction="in"/>
+<pin name="OUT" x="7.62" y="5.08" visible="pin" length="short" direction="pas" rot="R180"/>
+<pin name="EN" x="-10.16" y="0" visible="pin" length="short" direction="in"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MAX40200">
+<gates>
+<gate name="G$1" symbol="MAX40200" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="DSBGA">
+<connects>
+<connect gate="G$1" pin="EN" pad="B1"/>
+<connect gate="G$1" pin="GND" pad="B2"/>
+<connect gate="G$1" pin="IN" pad="A1"/>
+<connect gate="G$1" pin="OUT" pad="A2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11998,7 +12063,7 @@ Richard Hopper</text>
 </sheet>
 </sheets>
 </module>
-<module name="USB1" prefix="" dx="20.32" dy="15.24">
+<module name="USB" prefix="" dx="20.32" dy="15.24">
 <ports>
 <port name="+5V" side="right" coord="5.08" direction="pwr"/>
 <port name="DM" side="right" coord="0" direction="io"/>
@@ -14221,7 +14286,6 @@ Richard Hopper</text>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="S1" library="CHS_SWITCH" deviceset="CHS-02_SWITCH" device=""/>
-<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -14234,7 +14298,6 @@ Richard Hopper</text>
 <part name="J4" library="DF40FC-20DP-0.4V(51)" deviceset="DF40FC-20DP-0.4V(51)" device=""/>
 <part name="J3" library="SparkX" deviceset="I2C_STANDARD" device="JS-1MM" value="QIIC connector"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FD1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FD3" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FD5" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
@@ -14244,6 +14307,11 @@ Richard Hopper</text>
 <part name="J2" library="SparkFun-Connectors" deviceset="JST_2MM_MALE" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="S3" library="CHS_SWITCH" deviceset="CHS-02_SWITCH" device=""/>
+<part name="J5" library="DF40FC-20DP-0.4V(51)" deviceset="DF40FC-20DP-0.4V(51)" device=""/>
+<part name="U$1" library="MAX40200" deviceset="MAX40200" device=""/>
+<part name="U$2" library="MAX40200" deviceset="MAX40200" device=""/>
+<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14354,7 +14422,6 @@ Richard Hopper</text>
 <wire x1="350.52" y1="218.44" x2="370.84" y2="218.44" width="0.1524" layer="97"/>
 <wire x1="370.84" y1="218.44" x2="370.84" y2="208.28" width="0.1524" layer="97"/>
 <wire x1="370.84" y1="208.28" x2="350.52" y2="208.28" width="0.1524" layer="97"/>
-<text x="340.36" y="243.84" size="1.778" layer="97">Sockets to break out lines</text>
 <wire x1="368.3" y1="76.2" x2="368.3" y2="60.96" width="0.1524" layer="97"/>
 <wire x1="373.38" y1="60.96" x2="370.84" y2="60.96" width="0.1524" layer="97"/>
 <text x="10.16" y="236.22" size="1.778" layer="97">Battery JST socket</text>
@@ -14375,9 +14442,6 @@ Richard Hopper</text>
 <moduleinst name="SEN1" module="SENSORS-1" x="223.52" y="101.6">
 <attribute name="NAME" value="SEN1" x="223.52" y="101.6" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="USB1" module="USB1" x="22.86" y="160.02">
-<attribute name="NAME" value="USB1" x="22.86" y="160.02" size="2.032" layer="95" align="bottom-center"/>
-</moduleinst>
 <moduleinst name="FPGA" module="FPGA" x="86.36" y="48.26">
 <attribute name="NAME" value="FPGA" x="86.36" y="48.26" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
@@ -14390,14 +14454,8 @@ Richard Hopper</text>
 <moduleinst name="BAT" module="CHARGER" x="76.2" y="205.74">
 <attribute name="NAME" value="BAT" x="76.2" y="205.74" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="FT" module="FT4222" x="76.2" y="154.94">
-<attribute name="NAME" value="FT" x="76.2" y="154.94" size="2.032" layer="95" align="bottom-center"/>
-</moduleinst>
-<moduleinst name="DF40" module="DF40_SOCKETS" x="355.6" y="236.22">
-<attribute name="NAME" value="DF40" x="355.6" y="236.22" size="2.032" layer="95" align="bottom-center"/>
-</moduleinst>
-<moduleinst name="USB2" module="USB2" x="22.86" y="134.62">
-<attribute name="NAME" value="USB2" x="22.86" y="134.62" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="USB" module="USB2" x="22.86" y="180.34">
+<attribute name="NAME" value="USB" x="22.86" y="180.34" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 </moduleinsts>
 <instances>
@@ -14421,9 +14479,6 @@ Richard Hopper</text>
 <instance part="S1" gate="G$1" x="30.48" y="66.04" smashed="yes">
 <attribute name="NAME" x="22.86" y="74.93" size="1.27" layer="95" ratio="15"/>
 <attribute name="VALUE" x="22.86" y="55.88" size="1.27" layer="96" ratio="15"/>
-</instance>
-<instance part="GND3" gate="1" x="40.64" y="149.86" smashed="yes">
-<attribute name="VALUE" x="38.1" y="147.32" size="1.778" layer="96"/>
 </instance>
 <instance part="GND4" gate="1" x="101.6" y="198.12" smashed="yes">
 <attribute name="VALUE" x="99.06" y="195.58" size="1.778" layer="96"/>
@@ -14457,16 +14512,13 @@ Richard Hopper</text>
 <instance part="GND10" gate="1" x="121.92" y="83.82" smashed="yes">
 <attribute name="VALUE" x="119.38" y="81.28" size="1.778" layer="96"/>
 </instance>
-<instance part="GND5" gate="1" x="101.6" y="139.7" smashed="yes">
-<attribute name="VALUE" x="99.06" y="137.16" size="1.778" layer="96"/>
-</instance>
 <instance part="FD1" gate="G$1" x="355.6" y="215.9" smashed="yes"/>
 <instance part="FD3" gate="G$1" x="360.68" y="215.9" smashed="yes"/>
 <instance part="FD5" gate="G$1" x="365.76" y="215.9" smashed="yes"/>
 <instance part="FD2" gate="G$1" x="355.6" y="210.82" smashed="yes"/>
 <instance part="FD4" gate="G$1" x="360.68" y="210.82" smashed="yes"/>
-<instance part="GND16" gate="1" x="40.64" y="124.46" smashed="yes">
-<attribute name="VALUE" x="38.1" y="121.92" size="1.778" layer="96"/>
+<instance part="GND16" gate="1" x="40.64" y="170.18" smashed="yes">
+<attribute name="VALUE" x="38.1" y="167.64" size="1.778" layer="96"/>
 </instance>
 <instance part="J2" gate="G$1" x="17.78" y="228.6" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="226.06" size="1.778" layer="95" rot="R90"/>
@@ -14477,6 +14529,24 @@ Richard Hopper</text>
 <instance part="S3" gate="G$1" x="147.32" y="208.28" smashed="yes">
 <attribute name="NAME" x="139.7" y="217.17" size="1.27" layer="95" ratio="15"/>
 <attribute name="VALUE" x="139.7" y="198.12" size="1.27" layer="96" ratio="15"/>
+</instance>
+<instance part="J5" gate="G$1" x="309.88" y="149.86" smashed="yes">
+<attribute name="NAME" x="299.974" y="183.642" size="1.778" layer="95"/>
+<attribute name="VALUE" x="299.72" y="116.84" size="1.778" layer="96"/>
+</instance>
+<instance part="U$1" gate="G$1" x="314.96" y="215.9" smashed="yes">
+<attribute name="NAME" x="307.34" y="223.774" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="307.34" y="207.772" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="U$2" gate="G$1" x="314.96" y="238.76" smashed="yes">
+<attribute name="NAME" x="307.34" y="246.634" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="307.34" y="230.632" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="GND3" gate="1" x="297.18" y="228.6" smashed="yes">
+<attribute name="VALUE" x="294.64" y="226.06" size="1.778" layer="96"/>
+</instance>
+<instance part="GND5" gate="1" x="297.18" y="205.74" smashed="yes">
+<attribute name="VALUE" x="294.64" y="203.2" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -14518,12 +14588,6 @@ Richard Hopper</text>
 <wire x1="86.36" y1="226.06" x2="91.44" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="91.44" y1="226.06" x2="91.44" y2="223.52" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<portref moduleinst="USB1" port="GND"/>
-<wire x1="38.1" y1="154.94" x2="40.64" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="154.94" x2="40.64" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND13" gate="1" pin="GND"/>
@@ -14586,22 +14650,28 @@ Richard Hopper</text>
 <pinref part="J3" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<portref moduleinst="FT" port="GND"/>
-<wire x1="96.52" y1="144.78" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="144.78" x2="101.6" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="GND5" gate="1" pin="GND"/>
-</segment>
-<segment>
-<wire x1="40.64" y1="129.54" x2="40.64" y2="127" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="175.26" x2="40.64" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
-<portref moduleinst="USB2" port="GND"/>
-<wire x1="40.64" y1="129.54" x2="38.1" y2="129.54" width="0.1524" layer="91"/>
+<portref moduleinst="USB" port="GND"/>
+<wire x1="40.64" y1="175.26" x2="38.1" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="-"/>
 <wire x1="22.86" y1="228.6" x2="25.4" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="25.4" y1="228.6" x2="25.4" y2="226.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="304.8" y1="233.68" x2="297.18" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="297.18" y1="233.68" x2="297.18" y2="231.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="304.8" y1="210.82" x2="297.18" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="210.82" x2="297.18" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="BOOST_VBAT" class="0">
@@ -14645,11 +14715,6 @@ Richard Hopper</text>
 <label x="332.74" y="81.28" size="1.778" layer="95"/>
 <pinref part="J4" gate="G$1" pin="P$8"/>
 </segment>
-<segment>
-<portref moduleinst="FT" port="SPI_SCK"/>
-<wire x1="144.78" y1="167.64" x2="96.52" y2="167.64" width="0.1524" layer="91"/>
-<label x="99.06" y="167.64" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="SI4705_!RST!/FT4222_GPIO2" class="0">
 <segment>
@@ -14667,11 +14732,6 @@ Richard Hopper</text>
 <wire x1="325.12" y1="53.34" x2="337.82" y2="53.34" width="0.1524" layer="91"/>
 <label x="332.74" y="53.34" size="1.778" layer="95"/>
 <pinref part="J4" gate="G$1" pin="P$19"/>
-</segment>
-<segment>
-<portref moduleinst="FT" port="GPIO2"/>
-<wire x1="96.52" y1="154.94" x2="111.76" y2="154.94" width="0.1524" layer="91"/>
-<label x="99.06" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PAN1326_!SHUTD" class="0">
@@ -14716,30 +14776,16 @@ Richard Hopper</text>
 <label x="332.74" y="55.88" size="1.778" layer="95"/>
 <pinref part="J4" gate="G$1" pin="P$18"/>
 </segment>
-<segment>
-<portref moduleinst="FT" port="SS0O"/>
-<wire x1="96.52" y1="160.02" x2="111.76" y2="160.02" width="0.1524" layer="91"/>
-<label x="99.06" y="160.02" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="USB_5V" class="0">
 <segment>
 <portref moduleinst="BAT" port="IN"/>
-<wire x1="55.88" y1="205.74" x2="40.64" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="205.74" x2="40.64" y2="165.1" width="0.1524" layer="91"/>
-<portref moduleinst="USB1" port="+5V"/>
-<wire x1="38.1" y1="165.1" x2="40.64" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="205.74" x2="43.18" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="205.74" x2="43.18" y2="185.42" width="0.1524" layer="91"/>
 <label x="45.72" y="205.74" size="1.778" layer="95"/>
-<portref moduleinst="FT" port="VCC"/>
-<wire x1="55.88" y1="165.1" x2="53.34" y2="165.1" width="0.1524" layer="91"/>
-<junction x="40.64" y="165.1"/>
-<label x="43.18" y="165.1" size="1.778" layer="95"/>
-<wire x1="53.34" y1="165.1" x2="40.64" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="139.7" x2="53.34" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="139.7" x2="53.34" y2="165.1" width="0.1524" layer="91"/>
-<junction x="53.34" y="165.1"/>
-<portref moduleinst="USB2" port="+5V"/>
-<label x="43.18" y="139.7" size="1.778" layer="95"/>
+<portref moduleinst="USB" port="+5V"/>
+<wire x1="43.18" y1="185.42" x2="38.1" y2="185.42" width="0.1524" layer="91"/>
+<label x="45.72" y="185.42" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="325.12" y1="96.52" x2="337.82" y2="96.52" width="0.1524" layer="91"/>
@@ -14774,11 +14820,6 @@ Richard Hopper</text>
 <pinref part="J3" gate="G$1" pin="SCL"/>
 <wire x1="99.06" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<portref moduleinst="FT" port="I2C_SCL"/>
-<wire x1="160.02" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
-<label x="99.06" y="152.4" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="I2C0_SDA/UART_RX" class="0">
 <segment>
@@ -14806,11 +14847,6 @@ Richard Hopper</text>
 <label x="101.6" y="93.98" size="1.778" layer="95"/>
 <pinref part="J3" gate="G$1" pin="SDA"/>
 <wire x1="99.06" y1="93.98" x2="160.02" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<portref moduleinst="FT" port="I2C_SDA"/>
-<wire x1="160.02" y1="149.86" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
-<label x="99.06" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="REG_VSEL1" class="0">
@@ -14882,12 +14918,6 @@ Richard Hopper</text>
 <wire x1="17.78" y1="68.58" x2="10.16" y2="68.58" width="0.1524" layer="91"/>
 <label x="10.16" y="68.58" size="1.778" layer="95"/>
 </segment>
-<segment>
-<portref moduleinst="FT" port="VCCIO"/>
-<wire x1="53.34" y1="167.64" x2="55.88" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="167.64" x2="53.34" y2="172.72" width="0.1524" layer="91"/>
-<label x="53.34" y="175.26" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="VS2" class="0">
 <segment>
@@ -14899,11 +14929,6 @@ Richard Hopper</text>
 <portref moduleinst="RF" port="VCC"/>
 <label x="190.5" y="53.34" size="1.778" layer="95"/>
 <wire x1="198.12" y1="53.34" x2="187.96" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<portref moduleinst="REG" port="LOAD"/>
-<wire x1="266.7" y1="231.14" x2="276.86" y2="231.14" width="0.1524" layer="91"/>
-<label x="271.78" y="231.14" size="1.778" layer="95"/>
 </segment>
 <segment>
 <portref moduleinst="SEN2" port="VCC"/>
@@ -14921,9 +14946,14 @@ Richard Hopper</text>
 <pinref part="J4" gate="G$1" pin="P$3"/>
 </segment>
 <segment>
-<wire x1="99.06" y1="91.44" x2="109.22" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="J3" gate="G$1" pin="VCC"/>
-<label x="101.6" y="91.44" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="OUT"/>
+<wire x1="322.58" y1="243.84" x2="330.2" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="243.84" x2="330.2" y2="220.98" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="OUT"/>
+<wire x1="330.2" y1="220.98" x2="322.58" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="243.84" x2="342.9" y2="243.84" width="0.1524" layer="91"/>
+<junction x="330.2" y="243.84"/>
+<label x="342.9" y="243.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ISL23415_SPI_CS/FT4222_GPIO3" class="0">
@@ -14941,11 +14971,6 @@ Richard Hopper</text>
 <wire x1="325.12" y1="58.42" x2="337.82" y2="58.42" width="0.1524" layer="91"/>
 <label x="332.74" y="58.42" size="1.778" layer="95"/>
 <pinref part="J4" gate="G$1" pin="P$17"/>
-</segment>
-<segment>
-<portref moduleinst="FT" port="GPIO3"/>
-<wire x1="96.52" y1="157.48" x2="111.76" y2="157.48" width="0.1524" layer="91"/>
-<label x="99.06" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_MOSI/UART_CTS" class="0">
@@ -14975,11 +15000,6 @@ Richard Hopper</text>
 <label x="332.74" y="76.2" size="1.778" layer="95"/>
 <pinref part="J4" gate="G$1" pin="P$10"/>
 </segment>
-<segment>
-<portref moduleinst="FT" port="SPI_MOSI"/>
-<wire x1="144.78" y1="162.56" x2="96.52" y2="162.56" width="0.1524" layer="91"/>
-<label x="99.06" y="162.56" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="SPI_MISO/UART_RTS" class="0">
 <segment>
@@ -15007,11 +15027,6 @@ Richard Hopper</text>
 <wire x1="325.12" y1="78.74" x2="337.82" y2="78.74" width="0.1524" layer="91"/>
 <label x="332.74" y="78.74" size="1.778" layer="95"/>
 <pinref part="J4" gate="G$1" pin="P$9"/>
-</segment>
-<segment>
-<portref moduleinst="FT" port="SPI_MISO"/>
-<wire x1="144.78" y1="165.1" x2="96.52" y2="165.1" width="0.1524" layer="91"/>
-<label x="99.06" y="165.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RTC_!INT!/RESET_B" class="0">
@@ -15239,22 +15254,6 @@ Richard Hopper</text>
 <pinref part="J4" gate="G$1" pin="P$6"/>
 </segment>
 </net>
-<net name="USB_DP" class="0">
-<segment>
-<portref moduleinst="USB1" port="DP"/>
-<portref moduleinst="FT" port="DP"/>
-<wire x1="38.1" y1="157.48" x2="55.88" y2="157.48" width="0.1524" layer="91"/>
-<label x="43.18" y="157.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="USB_DM" class="0">
-<segment>
-<portref moduleinst="USB1" port="DM"/>
-<portref moduleinst="FT" port="DM"/>
-<wire x1="38.1" y1="160.02" x2="55.88" y2="160.02" width="0.1524" layer="91"/>
-<label x="43.18" y="160.02" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="BOOST_VOUT" class="0">
 <segment>
 <wire x1="134.62" y1="210.82" x2="101.6" y2="210.82" width="0.1524" layer="91"/>
@@ -15263,6 +15262,28 @@ Richard Hopper</text>
 <wire x1="101.6" y1="228.6" x2="86.36" y2="228.6" width="0.1524" layer="91"/>
 <label x="114.3" y="210.82" size="1.778" layer="95"/>
 <pinref part="S3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="REG_LOAD" class="0">
+<segment>
+<portref moduleinst="REG" port="LOAD"/>
+<wire x1="266.7" y1="231.14" x2="292.1" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="231.14" x2="292.1" y2="243.84" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="IN"/>
+<wire x1="292.1" y1="243.84" x2="304.8" y2="243.84" width="0.1524" layer="91"/>
+<label x="271.78" y="231.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC_QIIC" class="0">
+<segment>
+<pinref part="J3" gate="G$1" pin="VCC"/>
+<wire x1="99.06" y1="91.44" x2="121.92" y2="91.44" width="0.1524" layer="91"/>
+<label x="109.22" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="IN"/>
+<wire x1="304.8" y1="220.98" x2="289.56" y2="220.98" width="0.1524" layer="91"/>
+<label x="289.56" y="220.98" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
