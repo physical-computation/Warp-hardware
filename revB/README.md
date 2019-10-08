@@ -1,6 +1,6 @@
 # Switch settings
 
-# Power from USB and Sensors Enabled
+## Power from USB and Sensors Enabled
 ```
 S1.1 (top): on
 S1.2: on
