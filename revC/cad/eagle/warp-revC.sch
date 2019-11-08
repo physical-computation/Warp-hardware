@@ -7648,6 +7648,48 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-PowerSymbols">
+<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
+This library contains power, ground, and voltage-supply symbols.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="VCC">
+<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VCC" prefix="SUPPLY">
+<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;
+&lt;p&gt;Positive voltage supply (traditionally for a BJT device, C=collector).&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9800,6 +9842,10 @@ Richard Hopper</text>
 <part name="C5" library="SparkFun-Passives" deviceset="CAP" device="0402-CAP" value="10uF"/>
 <part name="C7" library="SparkFun-Passives" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
 <part name="C6" library="SparkFun-Passives" deviceset="CAP" device="0402-CAP" value="10uF"/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
+<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
+<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9903,6 +9949,18 @@ Richard Hopper</text>
 <attribute name="NAME" x="313.944" y="114.681" size="1.778" layer="95"/>
 <attribute name="VALUE" x="313.944" y="109.601" size="1.778" layer="96"/>
 </instance>
+<instance part="GND4" gate="1" x="195.58" y="116.84" smashed="yes">
+<attribute name="VALUE" x="193.04" y="114.3" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY1" gate="G$1" x="198.12" y="144.78" smashed="yes">
+<attribute name="VALUE" x="198.12" y="147.574" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY2" gate="G$1" x="182.88" y="66.04" smashed="yes">
+<attribute name="VALUE" x="182.88" y="68.834" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND5" gate="1" x="193.04" y="66.04" smashed="yes">
+<attribute name="VALUE" x="190.5" y="63.5" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9934,6 +9992,21 @@ Richard Hopper</text>
 <junction x="119.38" y="198.12"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="C3" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IOB_10A"/>
+<wire x1="175.26" y1="144.78" x2="190.5" y2="144.78" width="0.1524" layer="91"/>
+<label x="177.8" y="144.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IOT_46B_G0"/>
+<wire x1="175.26" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
+<label x="177.8" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="VCCIO_0"/>
+<wire x1="175.26" y1="165.1" x2="190.5" y2="165.1" width="0.1524" layer="91"/>
+<label x="177.8" y="165.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I2C1_SCL" class="0">
@@ -9970,6 +10043,7 @@ Richard Hopper</text>
 <junction x="205.74" y="162.56"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="C5" gate="G$1" pin="1"/>
+<label x="177.8" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I2C2_SDA" class="0">
@@ -10026,6 +10100,23 @@ Richard Hopper</text>
 <wire x1="109.22" y1="185.42" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IOB_25B_G3"/>
+<wire x1="175.26" y1="114.3" x2="187.96" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="114.3" x2="187.96" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="121.92" x2="195.58" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="121.92" x2="195.58" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<label x="177.8" y="114.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="RGB1"/>
+<wire x1="175.26" y1="71.12" x2="180.34" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="71.12" x2="180.34" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="73.66" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="73.66" x2="193.04" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="CRESET_B" class="0">
 <segment>
@@ -10062,16 +10153,11 @@ Richard Hopper</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<label x="177.8" y="165.1" size="1.778" layer="95"/>
-<pinref part="U2" gate="G$1" pin="VCCIO_0"/>
-<wire x1="175.26" y1="165.1" x2="198.12" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="165.1" x2="198.12" y2="167.64" width="0.1524" layer="91"/>
 <label x="177.8" y="160.02" size="1.778" layer="95"/>
 <pinref part="U2" gate="G$1" pin="VCCIO_2"/>
 <wire x1="198.12" y1="167.64" x2="198.12" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="160.02" x2="198.12" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="160.02" x2="198.12" y2="165.1" width="0.1524" layer="91"/>
-<junction x="198.12" y="165.1"/>
+<wire x1="198.12" y1="160.02" x2="198.12" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="VCC" gate="VCC" pin="VCC"/>
 <wire x1="175.26" y1="167.64" x2="198.12" y2="167.64" width="0.1524" layer="91"/>
 <label x="177.8" y="167.64" size="1.778" layer="95"/>
@@ -10102,6 +10188,19 @@ Richard Hopper</text>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="157.48" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IOB_12A_G4_CDONE"/>
+<wire x1="175.26" y1="139.7" x2="198.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="139.7" x2="198.12" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
+<label x="177.8" y="139.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IOB_2A"/>
+<wire x1="175.26" y1="60.96" x2="182.88" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="60.96" x2="182.88" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 <net name="SPI_CS" class="0">
@@ -11443,7 +11542,7 @@ Richard Hopper</text>
 Phillip Stanley-Marbell
 Richard Hopper</text>
 <text x="293.624" y="6.096" size="1.778" layer="94">NO WARRANTY. See LICENCE.txt</text>
-<text x="344.17" y="20.32" size="2.54" layer="94" ratio="15">USB2</text>
+<text x="344.17" y="20.32" size="2.54" layer="94" ratio="15">USB</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -12001,7 +12100,7 @@ Richard Hopper</text>
 <text x="50.8" y="144.78" size="1.778" layer="97">19/7/19</text>
 <text x="304.8" y="101.6" size="5.08" layer="91">Layer stack up:</text>
 <text x="304.8" y="96.52" size="2.54" layer="91">1: Signal</text>
-<text x="304.8" y="91.44" size="2.54" layer="91">2: GND / WLP breakout</text>
+<text x="304.8" y="91.44" size="2.54" layer="91">2: GND</text>
 <text x="304.8" y="86.36" size="2.54" layer="91">3: GND</text>
 <text x="304.8" y="60.96" size="2.54" layer="91">14: VS2</text>
 <text x="304.8" y="55.88" size="2.54" layer="91">15: GND</text>
@@ -12033,6 +12132,9 @@ Removed Grideye sensor </text>
 <text x="30.48" y="60.96" size="1.778" layer="97">USB</text>
 <text x="50.038" y="60.96" size="1.778" layer="97">7/10/19</text>
 <text x="62.992" y="60.96" size="1.778" layer="97">Swapped micro USB part </text>
+<text x="30.48" y="58.42" size="1.778" layer="97">FPGA</text>
+<text x="50.038" y="58.42" size="1.778" layer="97">8/11/19</text>
+<text x="62.992" y="58.166" size="1.778" layer="97">Removed microvias and rerouted FPGA</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -13031,7 +13133,7 @@ Richard Hopper</text>
 <approved hash="104,1@FPGA,175.26,111.76,U2,SPI_VCCIO1,VCC,,,"/>
 <approved hash="104,1@FPGA,175.26,167.64,U2,VPP_2V5,VCC,,,"/>
 <approved hash="104,1@FPGA,175.26,162.56,U2,VCCPLL,ICE40_VCC_PLL,,,"/>
-<approved hash="104,1@FPGA,175.26,165.1,U2,VCCIO_0,VCC,,,"/>
+<approved hash="104,1@FPGA,175.26,165.1,U2,VCCIO_0,VCC_1V2,,,"/>
 <approved hash="104,1@SENSORS-2,50.8,226.06,U1,VDD,VCC,,,"/>
 <approved hash="104,1@SENSORS-2,50.8,220.98,U1,VDDIO,VCC,,,"/>
 <approved hash="104,1@SENSORS-2,149.86,226.06,U2,VDD,VCC,,,"/>
@@ -13070,6 +13172,19 @@ Richard Hopper</text>
 <approved hash="213,2,266.7,231.14,LOAD,pwr,,,,"/>
 <approved hash="206,1@BLUETOOTH,73.66,162.56,N$3,,,,,"/>
 <approved hash="206,1@BLUETOOTH,73.66,165.1,N$3,,,,,"/>
+<approved hash="213,2,109.22,20.32,GND,pwr,,,,"/>
+<approved hash="208,1@FPGA,312.42,106.68,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,325.12,106.68,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,226.06,149.86,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,213.36,149.86,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,177.8,45.72,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,119.38,185.42,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,68.58,187.96,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,48.26,185.42,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,109.22,185.42,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,195.58,119.38,GND,sup,,,,"/>
+<approved hash="208,1@FPGA,175.26,71.12,GND,out,,,,"/>
+<approved hash="208,1@FPGA,193.04,68.58,GND,sup,,,,"/>
 <approved hash="209,1@SENSORS-2,340.36,139.7,SI4705_FMI,,,,,"/>
 <approved hash="106,1@SENSORS-2,340.36,139.7,SI4705_FMI,,,,,"/>
 <approved hash="206,1@DIGIPOT,132.08,172.72,SPI_MISO,,,,,"/>
@@ -13093,7 +13208,6 @@ Richard Hopper</text>
 <approved hash="113,1@USB,193.571,130.071,FRAME1,,,,,"/>
 <approved hash="113,1@DIGIPOT,193.571,130.071,FRAME1,,,,,"/>
 <approved hash="118,1@BLUETOOTH,78.74,194.31,Net,GND,,,,"/>
-<approved hash="118,1@FPGA,312.42,107.95,Net,GND,,,,"/>
 </errors>
 </schematic>
 </drawing>
