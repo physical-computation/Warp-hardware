@@ -380,7 +380,7 @@
 <wire x1="27.94" y1="-27.94" x2="-27.94" y2="-27.94" width="0.254" layer="94"/>
 <wire x1="-27.94" y1="-27.94" x2="-27.94" y2="27.94" width="0.254" layer="94"/>
 <pin name="VDD" x="-33.02" y="22.86" length="middle" direction="pwr"/>
-<pin name="VDD_IO" x="-33.02" y="17.78" visible="pin" length="middle" direction="pwr"/>
+<pin name="VDD_IO" x="-33.02" y="17.78" length="middle" direction="pwr"/>
 <pin name="GND@13" x="-33.02" y="-22.86" length="middle" direction="pwr"/>
 <pin name="GND@12" x="-33.02" y="-17.78" length="middle" direction="pwr"/>
 <pin name="RESERVED@15" x="-33.02" y="-7.62" length="middle" direction="nc"/>
@@ -11809,6 +11809,9 @@ Removed Grideye sensor </text>
 <text x="30.48" y="50.8" size="1.778" layer="97">SENSOR</text>
 <text x="62.738" y="50.546" size="1.778" layer="97">Replaced MAG3110 (obsolete) with FXOS8700CQ</text>
 <text x="50.038" y="50.8" size="1.778" layer="97">14/11/19</text>
+<text x="50.038" y="48.26" size="1.778" layer="97">15/01/19</text>
+<text x="62.738" y="48.006" size="1.778" layer="97">Corrected SPI lines from MCU</text>
+<text x="30.48" y="48.26" size="1.778" layer="97">MCU</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -12394,11 +12397,6 @@ USB: USB
 <label x="167.64" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<portref moduleinst="MP" port="SPI_MISO"/>
-<wire x1="144.78" y1="185.42" x2="195.58" y2="185.42" width="0.1524" layer="91"/>
-<label x="165.1" y="185.42" size="1.778" layer="95"/>
-</segment>
-<segment>
 <portref moduleinst="FP" port="SPI_MOSI"/>
 <wire x1="144.78" y1="27.94" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
 <label x="111.76" y="27.94" size="1.778" layer="95"/>
@@ -12418,13 +12416,13 @@ USB: USB
 <wire x1="317.5" y1="86.36" x2="350.52" y2="86.36" width="0.1524" layer="91"/>
 <label x="325.12" y="86.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="144.78" y1="187.96" x2="195.58" y2="187.96" width="0.1524" layer="91"/>
+<label x="167.64" y="187.96" size="1.778" layer="95"/>
+<portref moduleinst="MP" port="SPI_MOSI"/>
+</segment>
 </net>
 <net name="SPI_MISO/UART_RTS" class="0">
-<segment>
-<portref moduleinst="MP" port="SPI_MOSI"/>
-<wire x1="144.78" y1="187.96" x2="195.58" y2="187.96" width="0.1524" layer="91"/>
-<label x="165.1" y="187.96" size="1.778" layer="95"/>
-</segment>
 <segment>
 <portref moduleinst="SA" port="SPI_MISO"/>
 <wire x1="198.12" y1="109.22" x2="144.78" y2="109.22" width="0.1524" layer="91"/>
@@ -12449,6 +12447,11 @@ USB: USB
 <pinref part="J4" gate="G$1" pin="P$12"/>
 <wire x1="317.5" y1="88.9" x2="350.52" y2="88.9" width="0.1524" layer="91"/>
 <label x="325.12" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="144.78" y1="185.42" x2="195.58" y2="185.42" width="0.1524" layer="91"/>
+<label x="167.64" y="185.42" size="1.778" layer="95"/>
+<portref moduleinst="MP" port="SPI_MISO"/>
 </segment>
 </net>
 <net name="RTC_!INT!/RESET_B" class="0">
