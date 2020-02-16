@@ -46,20 +46,35 @@ You can obtain baseline firmware for the Warp platform from the [Warp firmware](
 See the GitHub issues for a complete list. Before getting your own boards manufactured, it is worthwhile getting in touch with us for a brief discussion of things to be careful about in providing instructions to your board assembly house and hints for getting the firmware running on Warp for the first time.
 
 
-## If you use Warp in your research, please cite it as:
+### If you use Warp in your research, please cite it as:
 Phillip Stanley-Marbell and Martin Rinard. “A Hardware Platform for Efficient Multi-Modal Sensing with Adaptive Approximation”. ArXiv e-prints (2018). arXiv:1804.09241.
-
 **BibTeX:**
-````
+```
 @ARTICLE{1804.09241,
-  author = {Stanley-Marbell, Phillip and Rinard, Martin},
-  title = {A Hardware Platform for Efficient Multi-Modal Sensing with Adaptive Approximation},
-  journal = {ArXiv e-prints},
-  archivePrefix = {arXiv},
-  eprint = {1804.09241},
-  year = 2018,
+	author = {Stanley-Marbell, Phillip and Rinard, Martin},
+	title = {A Hardware Platform for Efficient Multi-Modal 
+	Sensing with Adaptive Approximation},
+	journal = {ArXiv e-prints},
+	archivePrefix = {arXiv},
+	eprint = {1804.09241},
+	year = 2018,
 }
-````
-
+```
+Phillip Stanley-Marbell and Martin Rinard. “Warp: A Hardware Platform for Efficient Multi-Modal Sensing with Adaptive Approximation”. IEEE Micro, Volume 40 , Issue 1 , Jan.-Feb. 2020.
+**BibTeX:**
+```
+@ARTICLE{8959350,
+	author = {P. {Stanley-Marbell} and M. {Rinard}}, 
+	title = {Warp: A Hardware Platform for Efficient Multi-Modal
+	Sensing with Adaptive Approximation},
+	journal = {IEEE Micro},
+	year = {2020}, 
+	volume = {40}, 
+	number = {1}, 
+	pages = {57-66}, 
+	ISSN = {1937-4143}, 
+	month = {Jan},
+}
+```
 ### Acknowledgements
 This research is supported by an Alan Turing Institute award TU/B/000096 under EPSRC grant EP/N510129/1, by Royal Society grant RG170136, and by EPSRC grants EP/P001246/1 and EP/R022534/1.
